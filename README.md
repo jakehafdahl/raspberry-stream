@@ -8,10 +8,10 @@ To build a device that will pull recordings from my tivo, download them to its o
 * used to accept commands to determine videos available and the actions to perform on those videos (play, pause, stop, delete recording).
   * use this to pass from pi to hdmi https://github.com/jbaiter/pyomxplayer
   * maybe create a (rails or node) web app that writes commands to a queue for messaging. (https://abarbanell.wordpress.com/2014/08/26/rabbitmq-on-raspberry-pi/)
-  
+
 ###Python Processes
 * a process to run on a regular schedule (hourly?) to check for new recordings to download to device hard drive. (unless a stream option can be found).
-  * Can write in python pretty easily.
+  * Can write in python pretty easily. (will need to implement something similar to description here http://ubuntuforums.org/showthread.php?t=962557)
   * Compare filenames (without extension) to files on server (might need to parse html for elements)
   * put messages on queue with file path
 * a process to run on a regular basis (maybe called from the downloading service) to convert the .TiVo files to mpeg files
